@@ -31,8 +31,7 @@ This project is a virtualized enterprise infrastructure designed to simulate a r
 - Deployed a FortiGate firewall at the edge with NAT and filtering policies.
 - **Validated inter-VLAN routing** with successful ICMP traffic between PC1 (VLAN 10) and PC2 (VLAN 20).
 
-![Ping Inter-VLAN](LIEN_DE_TON_IMAGE_PING_ICI)
-*(N'oublie pas d'uploader l'image du ping et de mettre le lien ici)*
+![Ping Inter-VLAN](https://github.com/OussamaXiost/enterprise-system-security-home-lab/blob/main/suricataDetectingPings.PNG?raw=true)
 
 ### 3. SOC & Threat Detection
 ![Wazuh Dashboard](https://github.com/OussamaXiost/enterprise-system-security-home-lab/blob/main/WazuhEvents.PNG?raw=true)
@@ -41,8 +40,7 @@ This project is a virtualized enterprise infrastructure designed to simulate a r
 - Centralized Windows Event Logs and network logs in **Wazuh SIEM**.
 - Wrote custom detection rules for suspicious activities (e.g., brute force, Nmap scans) and mapped them to MITRE ATT&CK.
 
-![Suricata to Wazuh Pipeline](LIEN_DE_TON_IMAGE_TERMINAL_ICI)
-*(N'oublie pas d'uploader l'image du terminal et de mettre le lien ici)*
+![Suricata to Wazuh Pipeline](https://github.com/OussamaXiost/enterprise-system-security-home-lab/blob/main/suricata%20logsSSH.PNG?raw=true)
 
 ## Tech Stack
 - **Systems:** Windows Server 2022, Active Directory, DNS, GPO, Ubuntu Server
