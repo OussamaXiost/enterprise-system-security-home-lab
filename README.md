@@ -29,6 +29,10 @@ This project is a virtualized enterprise infrastructure designed to simulate a r
 - Configured VLANs to isolate traffic (Management, Users, Servers).
 - Deployed OSPF to allow dynamic routing between routers.
 - Deployed a FortiGate firewall at the edge with NAT and filtering policies.
+- **Validated inter-VLAN routing** with successful ICMP traffic between PC1 (VLAN 10) and PC2 (VLAN 20).
+
+![Ping Inter-VLAN](LIEN_DE_TON_IMAGE_PING_ICI)
+*(N'oublie pas d'uploader l'image du ping et de mettre le lien ici)*
 
 ### 3. SOC & Threat Detection
 ![Wazuh Dashboard](https://github.com/OussamaXiost/enterprise-system-security-home-lab/blob/main/WazuhEvents.PNG?raw=true)
@@ -36,6 +40,9 @@ This project is a virtualized enterprise infrastructure designed to simulate a r
 - Set up Open vSwitch (OVS) with port mirroring (SPAN) to send a copy of the network traffic to the monitoring interface.
 - Centralized Windows Event Logs and network logs in **Wazuh SIEM**.
 - Wrote custom detection rules for suspicious activities (e.g., brute force, Nmap scans) and mapped them to MITRE ATT&CK.
+
+![Suricata to Wazuh Pipeline](LIEN_DE_TON_IMAGE_TERMINAL_ICI)
+*(N'oublie pas d'uploader l'image du terminal et de mettre le lien ici)*
 
 ## Tech Stack
 - **Systems:** Windows Server 2022, Active Directory, DNS, GPO, Ubuntu Server
