@@ -2,7 +2,7 @@
 ### Focus: Windows Server, Active Directory & SOC Monitoring
 
 ## Project Overview
-This project is a virtualized enterprise infrastructure designed to simulate a real-world corporate Windows environment. The main goal was to design a secure network, deploy a complete Windows Server Domain, and implement a SOC (Security Operations Center) monitoring pipeline to audit and protect the infrastructure.
+This project is a virtualized enterprise infrastructure designed to simulate a real-world corporate Windows environment. The main goal was to design a secure network, deploy a complete Windows Server Domain, and implement a SOC (Security Operations Center) monitoring pipeline (Suricata, Zeek, Wazuh) to audit and protect the infrastructure.
 
 ## Architecture & Topology
 
@@ -11,7 +11,7 @@ This project is a virtualized enterprise infrastructure designed to simulate a r
 - **Systems Layer (Core Focus):** Windows Server 2022 (Active Directory Domain Services, DNS, DHCP, GPO, Advanced Auditing). The server is hosted on VMware and connected to the `SecurityMonitoring` cloud network.
 - **Network Layer:** MikroTik Routers with OSPF dynamic routing, VLAN segmentation, and Open vSwitch (OVS) for Layer 2 switching.
 - **Security Edge:** FortiGate Firewall (NAT, Firewall Policies).
-- **Monitoring & SOC:** Wazuh (SIEM) and Suricata (IDS) fed by mirrored traffic to monitor AD security events.
+- **Monitoring & SOC:** Wazuh (SIEM), Suricata (IDS), and Zeek (Network Metadata) fed by mirrored traffic to monitor AD security events.
 
 ## Key Implementations
 
@@ -37,6 +37,7 @@ This project is a virtualized enterprise infrastructure designed to simulate a r
 ![Wazuh Dashboard](https://github.com/OussamaXiost/enterprise-system-security-home-lab/blob/main/WazuhEvents.PNG?raw=true)
 
 - Set up Open vSwitch (OVS) with port mirroring (SPAN) to send a copy of the network traffic to the monitoring interface.
+- Deployed **Zeek** for network metadata analysis (DNS, HTTP, TLS) and **Suricata** for signature-based intrusion detection.
 - Centralized Windows Event Logs and network logs in **Wazuh SIEM**.
 - Wrote custom detection rules for suspicious activities (e.g., brute force, Nmap scans) and mapped them to MITRE ATT&CK.
 
@@ -45,5 +46,5 @@ This project is a virtualized enterprise infrastructure designed to simulate a r
 ## Tech Stack
 - **Systems:** Windows Server 2022, Active Directory, DNS, GPO, Ubuntu Server
 - **Networking:** MikroTik, Open vSwitch, OSPF, VLAN, TCP/IP
-- **Security:** FortiGate, Wazuh, Suricata
+- **Security:** FortiGate, Wazuh, Suricata, Zeek
 - **Virtualization:** VMware, GNS3
